@@ -44,6 +44,10 @@ body{
   width: 100%;
 }
 
+.buttons2, .score {
+  background-image: url('https://media.istockphoto.com/id/1126153975/photo/beautiful-brown-wood-background-on-lacquered-textured-plywood.jpg?s=612x612&w=0&k=20&c=tvGvF-1RO3AdH081OgZsP9OHhR8yKDQSMn6Omfe65eU=');
+}
+
 #deck-img {
   margin-bottom: 25px;
   margin-top: 25px;
@@ -70,10 +74,12 @@ button:hover {
 .player {
   display: flex;
   flex-direction: column;
+  border-radius: 4px;
+  overfloW: hidden;
   height: auto;
   width: 180px;
   border: 1px solid black;
-  margin: 1px;
+  margin: 2px;
 }
 
 .hand {
@@ -86,8 +92,8 @@ button:hover {
   display: flex;
   justify-content: center;
   height: 75px;
-  border: 2px solid black;
   padding: 20px;
+  border-top: 2px solid black;
 }
 
 .number {
@@ -122,6 +128,11 @@ button:hover {
 #timer-text {
   color: green;
   background-color: black;
-  width: 40px;
-  height: 25px;
+  width: 60px;
+  height: 50px;
+  border-radius: 4px;
+}
+
+#timer-display {
+  align-self: center;
 }
