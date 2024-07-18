@@ -14,6 +14,10 @@ let hitBtn = [];
 let standBtn = [];
 let playersFinished = 0; 
 
+//making add player button and start button invisible till timer duration is set
+addPlayer.style.display = "none";
+startBtn.style.display = "none";
+
 addPlayer.onclick = () => {
     const newPlayer = document.createElement("div");
     const playerClass = "player-" + addPlayerCount;
@@ -38,9 +42,10 @@ timerBtn.onclick = () => {
     const input = prompt("Set the timer duration (in seconds):");
     timerDuration = parseInt(input, 10) || 0; //parse the input from prompt, default to 0 if invalid
     timerBtn.style.display = "none"; 
+    addPlayer.style.display = "block";
+    startBtn.style.display = "block";
 };
 
-// Start Button
 startBtn.onclick = async () => {
     updateButtonLists();
 
@@ -127,7 +132,7 @@ document.addEventListener('click', async (event) => {
             hitBtn[playerIndex].style.display = "none";
             standBtn[playerIndex].style.display = "none";
 
-            playersFinished++;
+            // playersFinished++;
 
             moveToNextPlayer();
         }
@@ -175,12 +180,17 @@ function calculateScore(cardValue, oldValue) {
         result = 10 + oldValue;
     } else if (cardValue === 'ACE') {
         result = 11 + oldValue;
+        // if (result > 21){
+        //     result = result-10;
+        // }this doesnt cover the case when you draw AFTER the ace and want to stay < 21
     } else {
         result = parseInt(cardValue) + oldValue;
     }
 
     if (result > 21) {
         result = 'YOU BUSTED';
+        playersFinished++;
+        moveToNextPlayer();
     }
     
     return result;
@@ -260,7 +270,8 @@ function startPlayerTimer() {
                 currentPlayerHitBtn.style.display = "none";
                 currentPlayerStandBtn.style.display = "none";
             }
-
+            
+            playersFinished++;//forgot to add this when timer runs out
             moveToNextPlayer();
         } else {
             timerText.textContent = `Time Left: ${remainingTime}s`;
