@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f7f9;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #dcdee0; /* Light background color for the header */
+    padding: 1rem; /* Adds padding around the header content */
+}
+
+header h1 {
+    font-size: 2rem; /* Adjusts the font size of the heading */
+    color: #333; /* Sets the text color */
+    margin: 0; /* Removes default margin */
+    padding-left: 2rem; /* Adds padding to the left of the heading */
+}
+
+.wrapper {
+    width: 100%;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+#to-do-form {
+    padding: 32px 32px 0px 32px;
+}
+
+#to-do-form button {
+    padding: 6px 16px;
+    border-radius: 4px;
+    border: none;
+    font-size: 9.5px;
+    font-weight: bold;
+}
+
+#add-column-form button {
+    padding: 6px 16px;
+    border-radius: 4px;
+    border: none;
+    font-size: 9.5px;
+    font-weight: bold;
+}
+
+#add-column-form {
+    padding: 32px 32px 0px 32px;
+}
+
+#search-form {
+    padding: 32px 32px 0px 32px;
+}
+
+.kanban-board {
+    display: flex; /* Enables flexbox layout */
+    flex-direction: row;/*is default*/
+    gap: 1rem; /* Adds spacing between columns (optional) */
+    overflow-x: auto; /* Allows horizontal scrolling if necessary */
+}
+
+.column {
+    background-color: #a3a2a236;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(76, 75, 75, 0.068);
+    padding: 1rem;
+    width: 20%;
+    /* min-height: 400px; */
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+    flex-grow: 1;
+}
+
+.tasks {
+    flex: 1; /*container grows as text increases, uptil column space*/
+    overflow-y: auto; /*scrollbar appears if tasks exceed column*/
+}
+
+.task {
+    background: white;
+    color: black;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0,15);
+
+    padding: 12px;
+    border-radius: 4px;
+
+    font-size: 16px;
+    cursor: move;/*makes the cursor cool when hovering*/
+}
+
+.while-dragging {/*to change how the box looks while dragging*/
+    scale: 1.05;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0,25);
+    background: rgb(50, 50, 50);
+    color: white;
+}
+
+.add-task {
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 1rem;
+}
