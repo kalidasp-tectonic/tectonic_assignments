@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Example with Aside</title>
+  <link rel ="stylesheet" href = "styles.css">
+  <script src = "trial.js" defer></script>
+</head>
+<body>
+  <div class = "container">
+    <div class = "left-side">
+      <button id = "start-game"> START </button>
+        <div id = "deck">
+          <img id = "deck-img" src = "https://cdn.pixabay.com/photo/2012/05/07/18/53/card-game-48983_1280.png" width = 150>
+        </div>
+        <div class = "buttons">
+          <button id = "add-player"> ADD PLAYER </button>
+          <button id = "set-timer"> SET TIMER </button>
+          <div id="timer-display" style="display: none;">
+            <span id="timer-text">Time Left: 0s</span>
+          </div>
+        </div>
+      </div>
+      <div class = "right-side">
+        <div class = "player player-1">
+          <div class = "buttons2">
+            <button class = "hit"> HIT </button>
+            <button class = "stand"> STAND </button>
+          </div>
+          <div class = "score"><div class = "number">0</div></div>
+          <div class = "hand"></div>
+        </div>
+        <div class = "player player-2">
+          <div class = "buttons2">
+            <button class = "hit"> HIT </button>
+            <button class = "stand"> STAND </button>
+          </div>
+          <div class = "score"><div class = "number">0</div></div>
+          <div class = "hand"></div>
+        </div>
+      </div>
+  </div>
+</body>
+</html>
+

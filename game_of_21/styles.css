@@ -1,0 +1,127 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after{
+  box-sizing: inherit;
+}
+
+body{
+  background-image: url("https://t3.ftcdn.net/jpg/03/25/38/64/360_F_325386410_7XLHgFBmPH10k0GCUXbikWCAeFFC8145.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+.left-side {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+}
+
+.right-side{
+  display: flex;
+}
+
+.buttons {
+  display: flex;
+  height: 200px;
+  flex-direction: column;
+  width: 150px;
+  justify-content: space-evenly;
+}
+
+.buttons2 {
+  display: flex;
+  height: 50px;
+  flex-direction: row;
+  width: 100%;
+}
+
+#deck-img {
+  margin-bottom: 25px;
+  margin-top: 25px;
+}
+
+button {
+  background-color: #FFBF00;
+  border-radius: 4px;
+  height: 30px;
+}
+
+button:hover {
+  background-color: #ffd24d;
+  transform: scale(1.02);
+  cursor: pointer;
+}
+
+.stand:hover, .hit:hover {
+  background-color: #EB5406;
+  transform: scale(1.15);
+  cursor: pointer;
+}
+
+.player {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  width: 180px;
+  border: 1px solid black;
+  margin: 1px;
+}
+
+.hand {
+  margin: 5px;
+  flex: 1;
+  box-shadow: -3px 2px 8px -1px rgba(0,0,0,0.75);
+}
+
+.score {
+  display: flex;
+  justify-content: center;
+  height: 75px;
+  border: 2px solid black;
+  padding: 20px;
+}
+
+.number {
+  height: 25px;
+  width: 120px;
+  border-radius: 10px;
+  background-color: black;
+}
+
+#start-game:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+#start-game {
+  display: block;
+  height: 80px;
+  background-color: #50C878;
+}
+
+.hit, .stand {
+  display: none;
+  flex: 1; 
+  height: 100%;
+}
+
+.number {
+  color: white;
+  text-align: center;
+}
+
+#timer-text {
+  color: green;
+  background-color: black;
+  width: 40px;
+  height: 25px;
+}
