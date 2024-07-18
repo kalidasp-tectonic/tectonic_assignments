@@ -1,1 +1,64 @@
-
+<!DOCTYPE html>
+<head>
+    <meta charset = "UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--come back to this-->
+    <title>Kanban Board</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="add_task.js" defer></script><!--defer so all of it loads after the html file-->
+    <script src="drag.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Kanban Board</h1>
+    </header>
+    <main>
+        <div class = "wrapper"><!--wrapper class for all text in body-->
+            <div class = "kanban-board">
+                <!-- <div style = "flex 1 1 100%;">item takes up full line -->
+                <aside>
+                    <!-- search input field -->
+                    <form id="search-form">
+                        <input type="text" placeholder="Search tasks by title" id="search-input" />
+                    </form>
+                    <form id = "to-do-form">
+                        <input type = "text" placeholder = "New task..." id = "task-input"/>
+                        <button type = "submit"> Add </button>
+                    </form>
+                    <form id="add-column-form">
+                        <input type="text" placeholder="New column..." id="column-input"/>
+                        <button type="submit">Add Column</button>
+                    </form>
+                </aside>
+                <div class = "column" id = "to-do"><!--column class for each default column-->
+                    <h3>TO DO</h3>
+                    <!-- <button class="add-task">Add Task</button> -->
+                    <div class="tasks" id="to-do-tasks">
+                        <!--add to-do tasks here-->
+                    </div>
+                </div>
+                <div class = "column" id = "in-progress">
+                    <h3>IN PROGRESS</h3>
+                    <!-- <button class="add-task">Add Task</button> -->
+                    <div class="tasks" id="in-progress-tasks">
+                        <!--add in-progress tasks here-->
+                    </div>
+                </div>
+                <div class = "column" id = "in-review">
+                    <h3>IN REVIEW</h3>
+                    <!-- <button class="add-task">Add Task</button> -->
+                    <div class="tasks" id="in-review-tasks">
+                        <!--add in-review tasks here-->
+                    </div>
+                </div>
+                <div class = "column" id = "done">
+                    <h3>DONE</h3>
+                    <!-- <button class="add-task">Add Task</button> -->
+                    <div class="tasks" id="done-tasks">
+                        <!--add done tasks here-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
